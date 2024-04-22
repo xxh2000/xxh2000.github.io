@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Hadoop/Hbase面试题" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">Hbase面试题 | 大数据Guide</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/Hadoop/Hbase面试题"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Hbase面试题 | 大数据Guide"><meta data-rh="true" name="description" content="HBase是什么"><meta data-rh="true" property="og:description" content="HBase是什么"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/Hadoop/Hbase面试题"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/Hadoop/Hbase面试题" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/Hadoop/Hbase面试题" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="大数据Guide RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="大数据Guide Atom Feed"><link rel="stylesheet" href="/assets/css/styles.69f2a557.css">
+<script src="/assets/js/runtime~main.9ccc24a5.js" defer="defer"></script>
+<script src="/assets/js/main.901e4aca.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">大数据Guide</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/Flink/Flink SQL JOIN原理">大数据</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/Flink/Flink SQL JOIN原理">Flink</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/docs/Hadoop/Hadoop实践">Hadoop</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Hadoop/Hadoop实践">Hadoop实践</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/Hadoop/Hadoop面试题">Hadoop面试题</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/Hadoop/Hbase面试题">Hbase面试题</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/Hive/Hive调优">Hive</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/Kafka/Kafka实践">Kafka</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/OLAP/Clickhouse/Clickhouse存算分离">OLAP</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/Spark/Spark面试题1">Spark</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/Zookeeper/Zookeeper面试题">Zookeeper</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/其他/Flume面试题">其他</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/数据仓库/数仓架构建设方法论">数据仓库</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/docs/数据湖/Iceberg/Iceberg实践">数据湖</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Hadoop</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Hbase面试题</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Hbase面试题</h1></header><h3 class="anchor anchorWithStickyNavbar_LWe7" id="hbase是什么">HBase是什么<a href="#hbase是什么" class="hash-link" aria-label="Direct link to HBase是什么" title="Direct link to HBase是什么">​</a></h3>
+<ol>
+<li>HBase一个分布式的基于列式存储的NoSQL数据库,基于Hadoop的hdfs存储，zookeeper进行管理。</li>
+<li>HBase适合存储半结构化或非结构化数据，对于数据结构字段不够确定或者杂乱无章很难按一个概念去抽取的数据。</li>
+<li>HBase为null的记录不会被存储.</li>
+<li>基于的表包含rowkey，时间戳，和列族。新写入数据时，时间戳更新，同时可以查询到以前的版本.</li>
+<li>HBase是主从架构。hmaster作为主节点，hregionserver作为从节点。</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="说说-hbase-的存储结构">说说 HBase 的存储结构<a href="#说说-hbase-的存储结构" class="hash-link" aria-label="Direct link to 说说 HBase 的存储结构" title="Direct link to 说说 HBase 的存储结构">​</a></h3>
+<p>HBase 是一个分布式、可扩展、高性能的列式存储系统，它基于 Google 的 Bigtable 设计。HBase 的主要存储结构包括表（Table）、区域（Region）、列族（Column Family）、列（Column）和值（Value）。</p>
+<ol>
+<li><strong>表（Table）</strong>：表是 HBase 中的数据容器，由行键（rowkey）和列族（Column Family）组成。表可以在 HBase 中进行创建、删除和修改操作。</li>
+<li><strong>区域（Region）</strong>：区域是表按照行键范围划分成的子集。每个区域都有一个起始行键（start key）和一个结束行键（end key），其中起始行键包含了该区域的所有数据，而结束行键则是该区域数据的最后一个行 键。当一个区域的大小超过 256MB 时，HBase 会自动将其分割成两个子区域。</li>
+<li><strong>列族（Column Family）</strong>：列族是表中列的逻辑分组。每个列族都有一个唯一的名称，用于标识表中的不同列。列族在 HBase 中用于存储具有相同性质的数据，例如，一个列族可以存储用户的基本信息，另一个列族可以存储用户的订单信息。</li>
+<li><strong>列（Column）</strong>：列是表中数据的具体属性。每个列都有一个唯一的名称和数据类型，用于表示表中的具体数据。HBase 支持多种数据类型，如字符串、数字、日期等。</li>
+<li><strong>值（Value）</strong>：价值是表中存储的具体数据。每个值都有一个对应的列和行键，用于在表中存储和检索数据。</li>
+</ol>
+<p>HBase 的存储结构还包括以下组件：</p>
+<ol>
+<li><strong>HRegionServer</strong>：HRegionServer 是一个管理 HRegion 实例的服务。它负责创建、删除和修改 HRegion 实例，并确保它们在 HBase 集群中正确地分配和运行。</li>
+<li><strong>HMaster</strong>：HMaster 是 HBase 集群中的主控制器。它负责管理 HRegionServer 实例，并为每个表分配适当的 HRegion 实例。HMaster 还负责处理集群中的备份和恢复操作。</li>
+<li><strong>HRegion</strong>：HRegion 是表在 HBase 中的物理存储单元。它包含一个或多个 Store 实例，每个 Store 实例都对应一个或多个 StoreFile。StoreFile 是 HFile 的实例，而 HFile 是 HBase 中的实际存储文件。</li>
+<li><strong>MemStore</strong>：MemStore 是 HBase 中的内存存储组件。它用于存储新写入的数据，并定期将其刷新到磁盘上的 StoreFile。</li>
+<li><strong>Store</strong>：Store 是 HBase 中的存储管理组件。它用于在 MemStore 和磁盘上的 StoreFile 之间进行数据同步，以确保数据的持久性和一致性。</li>
+</ol>
+<p>总之，HBase 的存储结构由表、区域、列族、列和 值组成，这些组件通过 HRegionServer、HMaster 和 Store 等组件进行管理。这种结构使得 HBase 具有高性能、可扩展性和高可用性，能够轻松地处理海量数据</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="说说-hbase-详细架构及内部机制">说说 HBase 详细架构及内部机制<a href="#说说-hbase-详细架构及内部机制" class="hash-link" aria-label="Direct link to 说说 HBase 详细架构及内部机制" title="Direct link to 说说 HBase 详细架构及内部机制">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="img_14.png" src="/assets/images/img_14-a587fcf8dd16795e80e58b47f7802627.png" width="719" height="408" class="img_ev3q"></p>
+<p>HBase采用Master/Slave架构搭建集群，它隶属于Hadoop生态系统，由一下类型节点组成： HMaster 节点、HRegionServer 节点、 ZooKeeper 集群，而在底层，它将数据存储于HDFS中，因而涉及到HDFS的NameNode、DataNode等，总体结构如下</p>
+<p>各组件说明：</p>
+<p><strong>Client</strong>：</p>
+<p>访问数据的入口，包含访问HBase的API接口，维护着一些cache来加快对HBase的访问</p>
+<ol>
+<li>使用HBase RPC机制与HMaster和HRegionServer进行通信；</li>
+<li>Client与HMaster进行通信进行管理类操作；</li>
+<li>Client与HRegionServer进行数据读写类操作；</li>
+</ol>
+<p><strong>HMaster：NAMENODE RESOURCEMANAGER</strong></p>
+<p>HMaster 没有单点问题，HBase中可以启动多个HMaster，通过Zookeeper保证总有一个Master在运行。</p>
+<p>HMaster主要负责Table和Region的管理工作：</p>
+<ol>
+<li>管理用户对表的增删改查操作；</li>
+<li>管理HRegionServer的负载均衡，调整Region分布；</li>
+<li>Region Split后，负责新Region的分布；</li>
+<li>在HRegionServer停机后，负责失效HRegionServer上Region 的迁移；</li>
+</ol>
+<p><strong>HRegionServer：DATANODE NODEMANAGER</strong></p>
+<p>HBase中最核心的模块；</p>
+<ol>
+<li>维护region，处理对这些region的IO请 求；</li>
+<li>Regionserver负责切分在运行过程中变得过大的region；</li>
+</ol>
+<p><strong>Zookeeper</strong>：</p>
+<ol>
+<li>zookeeper的选举机制保证任何时候，集群中只有一个master</li>
+<li>实时监控Region Server的状态，将Region server的上线和下线信息实时通知给Master</li>
+<li>存储HBase的schema</li>
+<li>存贮所有Region的寻址入口</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="说说hbase-的特点">说说HBase 的特点<a href="#说说hbase-的特点" class="hash-link" aria-label="Direct link to 说说HBase 的特点" title="Direct link to 说说HBase 的特点">​</a></h3>
+<ol>
+<li><strong>海量存储</strong>：可以存储大批量的数据。</li>
+<li><strong>列（簇）式存储</strong>：HBase表的数据是基于列族进行存储的，列族是在列的方向上的划分。</li>
+<li><strong>极易扩展</strong>：底层依赖HDFS，当磁盘空间不足的时候，只需要动态增加 datanode节点服务(机器)就可以了；可以通过增加服务器来提高集群的存储能力。</li>
+<li><strong>高并发</strong>：支持高并发的读写请求。</li>
+<li><strong>稀疏</strong>：稀疏主要是针对HBase列的灵活性，在列族中，你可以指定任意多的列，在列数据为空的情况下，是不会占用存储空间的。</li>
+<li><strong>数据的多版本</strong>：HBase表中的数据可以有多个版本值，默认情况下是根据版本号去区分，版本号就是插入数据的时间戳。</li>
+<li><strong>数据类型单一</strong>：所有的数据在HBase中是以字节数组进行存储</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="为什么-hbase-查询比较快">为什么 HBase 查询比较快<a href="#为什么-hbase-查询比较快" class="hash-link" aria-label="Direct link to 为什么 HBase 查询比较快" title="Direct link to 为什么 HBase 查询比较快">​</a></h3>
+<p>主要原因是由其架构和底层的数据结构决定的，即由LSM-Tree(Log-Structured Merge-Tree)+HTable(region分区)+Cache决定。</p>
+<p>客户端可以直接定位到要查数据所在的Hregion-server服务器，然后直接在服务器的一个region上查找要匹配的数据，并且这些数据部分是经过cache缓存的。</p>
+<p>HBase会将数据保存到内存中,在内存中的数据是有序的，如果内存空间满了，会刷写到HFile中，而在HFile中保存的内容也是有序的。当数据写入HFile后，内存中的数据会被丢弃.HFile文件为磁盘顺序读取做了优化。</p>
+<p>HBase的写入速度快是因为他其实并不是真的立即写入文件中，而是先写入内存，随后异步刷入HFile。所以在客户端看来，写入数据速度很快。另外，写入时候随机写入转换成顺序写，数据写入速度也很稳定。读取速度很快是因为他使用了LSM树形结构，而不是B或B+树。 磁盘顺序读取速度很快，但是相比而言，寻找磁道的速度就要慢很多。HBase的存储结构导致他需要磁盘寻道时间在可预测范围内，并且读取与所要查询的rowkey连续的任意数量的记录都不会引发额外的寻道开销。比如有五个存储文件，那么最多需要5次磁盘寻道就可以。而关系型数据库，即使有索引，也无法确定磁盘寻道次数。而且，HBase读取首先会在缓存(BlockCache)中查找,它采用了LRU(最近最少使用算法)，如果缓存中没找到,会从内存中的MemStore中查找，只有这两个地方都找不到时，才会加载HFile中的内容</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="说说-hbase-的-rowkey-的设计原则">说说 HBase 的 rowKey 的设计原则<a href="#说说-hbase-的-rowkey-的设计原则" class="hash-link" aria-label="Direct link to 说说 HBase 的 rowKey 的设计原则" title="Direct link to 说说 HBase 的 rowKey 的设计原则">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="散列原则">散列原则：<a href="#散列原则" class="hash-link" aria-label="Direct link to 散列原则：" title="Direct link to 散列原则：">​</a></h4>
+<p>如果是rowkey按照时间戳或者是顺序递增</p>
+<p>那么将会产生热点现象 建议将rowkey的高位作为散列字段，由程序随机生成，低位放时间字段，这样将提高数据均衡分布在每个RegionServer，以实现负载均衡的几率</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="长度原则">长度原则：<a href="#长度原则" class="hash-link" aria-label="Direct link to 长度原则：" title="Direct link to 长度原则：">​</a></h4>
+<p>RowKey的长度不宜过长，不宜超过16个字节，最大长度64kb，实际应用中一般为10-100bytes，以byte[]形式保存。一条数据是根据rowkey来当成索引的，如果过长就会快速占据memstore的128M，然后被刷写到磁盘，也就是说相同的空间存贮的内容被rowkey占据了一大部分，减少了主要内容的存贮。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="唯一原则">唯一原则：<a href="#唯一原则" class="hash-link" aria-label="Direct link to 唯一原则：" title="Direct link to 唯一原则：">​</a></h4>
+<p>必须在设计上保证其唯一性， rowkey可以锁定唯一的一行数据，rowkey重复的话后put的数据会覆盖前面插入的数据</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="说说-hbase-中-scan-和-get-的功能以及实现的异同">说说 HBase 中 scan 和 get 的功能以及实现的异同<a href="#说说-hbase-中-scan-和-get-的功能以及实现的异同" class="hash-link" aria-label="Direct link to 说说 HBase 中 scan 和 get 的功能以及实现的异同" title="Direct link to 说说 HBase 中 scan 和 get 的功能以及实现的异同">​</a></h3>
+<p>HBase的查询实现只提供两种方式：</p>
+<p>1.按指定RowKey 获取唯一一条记录，get方法（org.apache.hadoop.HBase.client.Get）Get 的方法处理分两种 : 设置了ClosestRowBefore 和没有设置的rowlock .主要是用来保证行的事务性，即每个get 是以一个row 来标记的.一个row中可以有很多family 和column.</p>
+<p>2.按指定的条件获取一批记录，scan方法(org.apache.Hadoop.HBase.client.Scan）实现条件查询功能使用的就是scan 方式.</p>
+<p>1）scan 可以通过setCaching 与setBatch 方法提高速度(以空间换时间)；</p>
+<p>2）scan 可以通过setStartRow 与setEndRow 来限定范围([start，end)start 是闭区间，end 是开区间)。范围越小，性能越高。</p>
+<p>3）scan 可以通过setFilter 方法添加过滤器，这也是分页、多条件查询的基础。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="详细谈谈-hbase-中一个-cell-的结构">详细谈谈 HBase 中一个 cell 的结构<a href="#详细谈谈-hbase-中一个-cell-的结构" class="hash-link" aria-label="Direct link to 详细谈谈 HBase 中一个 cell 的结构" title="Direct link to 详细谈谈 HBase 中一个 cell 的结构">​</a></h3>
+<p>HBase中的Cell表示的是表中的单元格，由<code>{rowkey, column Family:column, version}</code> 唯一确定的单元。cell中的数据是没有类型的，全部是字节码形式存贮。其中 version 就是这个单元格中的 Time Stamp。</p>
+<p>在 HBase 中，一个 cell 的结构由以下三个部分组成：</p>
+<ol>
+<li><strong>rowkey</strong>：rowkey 是 cell 的唯一标识，用于唯一确定表中的每一行数据。rowkey 通常是一个字符串，由自然键（如 ID、用户名等）或组合键（如城市、省份、国家等）组成。</li>
+<li><strong>column family</strong>：column family 是 cell 中的一个属性，用于标识 cell 所属的列族。列族是一个逻辑概念，用于将表中的列划分为不同的组。每个列族都有一个唯一的名称，用于标识该列族。</li>
+<li><strong>column</strong>：column 是 cell 中的另一个属性，用于标识 cell 所属的列。列是一个逻辑概念，用于将表中的数据划分为不同的列。每个列都有一个唯一的名称，用于标识该列。</li>
+</ol>
+<p>version：version 是 cell 的时间戳，用于记录 cell 的创建时间或修改时间。在 HBase 中，每个 cell 都有一个唯一的时间戳，用于唯一确定该 cell 的版本。</p>
+<p>数据：data 是 cell 中存储的数据，数据类型可以是任何字节码形式。在 HBase 中，数据是以字节码形式存储的，而不是特定的数据类型。这种存储方式使得 HBase 可以存储任何类型的数据，例如文本、图片、音频等。</p>
+<p>值：value 是 cell 中存储的实际数据值。在 HBase 中，值是由字节码形式存储的，而不是特定的数据类型。这种存储方式使得 HBase 可以存储任何类型的数据，例如文本、图片、音频等。</p>
+<p>HBase 中的 cell 是表中的基本存储单元，由 rowkey、column family、column 和 version 唯一确定。cell 中的数据是以字节码形式存储的，可以是任何类型的数据。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hbase-中分布式存储的最小单元是什么">HBase 中分布式存储的最小单元是什么<a href="#hbase-中分布式存储的最小单元是什么" class="hash-link" aria-label="Direct link to HBase 中分布式存储的最小单元是什么" title="Direct link to HBase 中分布式存储的最小单元是什么">​</a></h3>
+<p>在 HBase 中，分布式存储的最小单元是 Region。每个 Region 都是一个独立的存储单元，包含一个或多个 StoreFile。Region 是 HBase 中数据存储和访问的基本单位，也是 HBase 中分布式存储和负载均衡的基础。</p>
+<p>然而，Region 并不是存储的最小单元。在 HBase 中，存储的最小单元是 StoreFile。StoreFile 是 HBase 中的数据存储文件，每个 StoreFile 都包含一个或多个列族的数据。StoreFile 的大小通常由</p>
+<p>HBase.hstore.compactionThreshold 和 HBase.hstore.blockingStoreFiles 参数控制。当一个 StoreFile 的大小达到 compactionThreshold 时，HBase 会自动将其 compact 成一个更大的 StoreFile。当一个 StoreFile 的大小超过 blockingStoreFiles 参数设定的值时，HBase 会将其拆分成多个更小的 StoreFile。</p>
+<p>因此，虽然 Region 是分布式存储的最小单元，但 StoreFile 才是 HBase 中存储的最小单元</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="请描述如何解决-hbase-中-region-太小和-region-太大带来的冲突">请描述如何解决 HBase 中 region 太小和 region 太大带来的冲突<a href="#请描述如何解决-hbase-中-region-太小和-region-太大带来的冲突" class="hash-link" aria-label="Direct link to 请描述如何解决 HBase 中 region 太小和 region 太大带来的冲突" title="Direct link to 请描述如何解决 HBase 中 region 太小和 region 太大带来的冲突">​</a></h3>
+<p>在 HBase 中，region 太小和 region 太大都可能导致性能问题和数据丢失。</p>
+<p>下面是一些解决这些问题的方法：</p>
+<ol>
+<li><strong>调整 HBase.hregion.max.filesize</strong>：可以通过调整 HBase.hregion.max.filesize 参数来控制每个 region 的最大文件大小。默认情况下，该参数为256m。如果 region 太小，可以适当增加该参数值，以减少 split 操作的数量。如果 region 太大，可以适当减小该参数值，以避免 compaction 操作过多。</li>
+<li><strong>调整 HBase.hregion.min.size</strong>：可以通过调整 HBase.hregion.min.size 参数来控制每个 region 的最小大小。默认情况下，该参数为 1GB。如果 region 太小，可以适当增加该参数值，以减少 split 操作的数量。如果 region 太大，可以适当减小该参数值，以避免 compaction 操作过多。</li>
+<li><strong>使用 RegionSplitter 工具</strong>：RegionSplitter 工具可以帮助您在 HBase 中拆分过大的 region。可以使用以下命令来拆分 region：</li>
+</ol>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">hbase regionsplit --region=region_name  </span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<ol>
+<li><strong>预分区</strong>：预分区是一种避免 region 分裂的方法。在 HBase 中，可以使用预分区来创建一定数量的 region，以避免在数据写入时频繁进行 split 操作。预分区可以通过以下命令来实现：</li>
+</ol>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">hbase create_table -p 预分区_参数  </span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>其中，预分区参数指定了要创建的 region 数量。</p>
+<p>通过调整 HBase.hregion.max.filesize 和 HBase.hregion.min.size 参数、使用 RegionSplitter 工具和预分区方法，可以有效地解决 HBase 中 region 太小和 region 太大带来的冲突。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="简述-hbase-中-compact-机制">简述 HBase 中 compact 机制<a href="#简述-hbase-中-compact-机制" class="hash-link" aria-label="Direct link to 简述 HBase 中 compact 机制" title="Direct link to 简述 HBase 中 compact 机制">​</a></h3>
+<p>在 HBase 中，compact 用于合并多个 storefile，从而减少磁盘上的文件数量，提高查询效率。Compact 操作会清理过期数据和删除标记，从而避免数据丢失和磁盘空间浪费。</p>
+<p>Compact 的作用：</p>
+<ol>
+<li>合并文件</li>
+<li>清除过期，多余版本的数据</li>
+<li>提高读写数据的效率</li>
+</ol>
+<p>ompact 的触发条件是当 storefile 的大小达到一定程度时，HBase 系统会自动触发 compaction 操作。这个大小的阈值可以通过配置参数来设置，例如通过修改 hbase.hstore.compactionThreshold 和 hbase.hstore.compaction.max 参数来调整。</p>
+<p>HBase 中实现了两种compaction 的方式：minor 和 major。</p>
+<ul>
+<li>Minor compaction 主要用于合并多个 storefile，并对数据进行版本合并和删除标记清理。</li>
+<li>Major compaction 则是对整个 Region 的所有 storefile 进行合并，最终生成一个更大的 storefile。</li>
+</ul>
+<p>Minor compaction 和 major compaction 的区别在于合并的范围和执行的频率。</p>
+<ul>
+<li>Minor compaction 只合并一个 storefile，执行频率较高，通常每隔一定时间就会触发。</li>
+<li>Major compaction 合并整个 Region 的所有 storefile，执行频率较低 ，通常在 Minor compaction 执行一定次数后才会触发。</li>
+</ul>
+<p>在 HBase 中，compact 相关的配置参数主要包括：</p>
+<ol>
+<li>hbase.hstore.compactionThreshold：指定一个 storefile 的大小阈值，当 storefile 大小达到该阈值时，会触发 minor compaction 操作。</li>
+<li>hbase.hstore.blockingStoreFiles：指定一个 storefile 的数量阈值，当一个 Region 中的 storefile 数量达到该阈值时，会触发 major compaction 操作。</li>
+<li>hbase.hstore.compaction.max：指定一个 storefile 的最大大小，当 storefile 大小达到该阈值时，会触发 minor compaction 操作。</li>
+<li>hbase.hstore.compaction.min：指定一个 storefile 的最小大小，当 storefile 大小小于该阈值时，不会触发 compaction 操作。</li>
+</ol>
+<p>此外，还可以通过调整 HBase 的其他参数来优化 compaction 操作，例如调整 memstore.size.上限、刷新和 Compaction 策略等</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hbase-如何进行预分区以及作用">HBase 如何进行预分区以及作用<a href="#hbase-如何进行预分区以及作用" class="hash-link" aria-label="Direct link to HBase 如何进行预分区以及作用" title="Direct link to HBase 如何进行预分区以及作用">​</a></h3>
+<p>HBase默认建表时有一个region。这个region的rowkey是没有边界的，即没有startkey和endkey，在数据写入时，所有数据都会写入这个默认的region，随着数据的不断增加，此region已经不能承受不断增长的数据量,会进行split，分成2个region.。在此过程中，会产生两个问题:</p>
+<ol>
+<li>数据往一个region上写,会有写热点问题.</li>
+<li>region split会消耗宝贵的集群I/O资源.</li>
+</ol>
+<p>基于此我们可以控制在建表的时候,创建多个空region，并确定每个region的起始和终止rowkey，这样只要我们的rowkey设计能均匀的命中各个region，就不会存在写热点问题。自然split的几率也会大大降低。当然随着数量的不断增长，该split的还是要进行split。像这样预先创建HBase表分区的方式,称之为预分区</p>
+<p>创建预分区可以通过shell或者java代码实现</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">#以下是shell方式</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">#指明分割点</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">create &#x27;t1&#x27;,&#x27;f1&#x27;,SPLITS=&gt;[&#x27;10&#x27;,&#x27;20&#x27;,&#x27;30&#x27;,&#x27;40&#x27;]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">#HexStringSplit指明分割策略,-c 10 指明要分割的区域数量,-f指明表中的列族,用&quot;:&quot;分割</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">HBase org.apache.hadoop.HBase.util.RegionSpliter test_table HexStringSplit -c 10 -f f1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">#根据文件创建分区并压缩</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">create &#x27;split_table_test&#x27;,{NAME =&gt; &#x27;cf&#x27;,COMPRESSION =&gt; &#x27;SNAPPY&#x27;},{SPLITS_FILE =&gt; &#x27;region_split_info.txt&#x27;}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hregionserver-宕机如何处理">HRegionServer 宕机如何处理<a href="#hregionserver-宕机如何处理" class="hash-link" aria-label="Direct link to HRegionServer 宕机如何处理" title="Direct link to HRegionServer 宕机如何处理">​</a></h3>
+<ol>
+<li>ZooKeeper 会监控 HRegionServer 的上下线情况，当 ZK 发现某个 HRegionServer 宕机之后会通知 HMaster 进行失效备援；</li>
+<li>该 HRegionServer 会停止对外提供服务，就是它所负责的 region 暂时停止对外提供服务；</li>
+<li>HMaster 会将该 HRegionServer 所负责的 region 转移到其他 HRegionServer 上，并且会对 HRegionServer 上存在 memstore 中还未持久化到磁盘中的数据进行恢复；</li>
+<li>这个恢复的工作是由 WAL 重播来完成，这个过程如下：</li>
+</ol>
+<ul>
+<li>wal 实际上就是一个文件，存在/HBase/WAL/对应 RegionServer 路径下。</li>
+<li>宕机发生时，读取该 RegionServer 所对应的路径下的 wal 文件，然后根据不同的region 切分成不同的临时文件 recover.edits。</li>
+<li>当 region 被分配到新的 RegionServer 中，RegionServer 读取 region 时会进行是否存在 recover.edits，如果有则进行恢复。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="说说-hbase-的读流程">说说 HBase 的读流程<a href="#说说-hbase-的读流程" class="hash-link" aria-label="Direct link to 说说 HBase 的读流程" title="Direct link to 说说 HBase 的读流程">​</a></h3>
+<p>1）HRegisonServer保存着.meta.表及数据表，首先client先访问zk，访问-ROOT-表，然后在zk上面获取.meta.表所在的位置信息，找到这个meta表在哪个HRegionServer上面保存着。</p>
+<p>2 ）接着client访问HRegionServer表从而读取.meta.进而获取.meta.表中存放的元数据。</p>
+<p>3）client通过.meta.中的元数据信息，访问对应的HRegionServer，然后扫描HRegionServer的Memstore和StoreFile来查询数据。</p>
+<p>4）最后把HRegionServer把数据反馈给client</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hbase-的写流程">HBase 的写流程<a href="#hbase-的写流程" class="hash-link" aria-label="Direct link to HBase 的写流程" title="Direct link to HBase 的写流程">​</a></h3>
+<p>1）client访问zk中的-ROOT-表，然后后在访问.meta.表，并获取.meta.中的元数据。</p>
+<p>2）确定当前要写入的HRegion和HRegionServer。</p>
+<p>3）clinet向HRegionServer发出写相应的请求，HRegionServer收到请求并响应。</p>
+<p>4）client先将数据写入到HLog中，以防数据丢失。</p>
+<p>5）然后将数据写入到MemStore中。</p>
+<p>6）如果HLog和MemStore都写入成功了，那么表示这个条数据写入成功了。</p>
+<p>7）如果MemStore写入的数据达到了阈值，那么将会flush到StoreFile中。</p>
+<p>8）当StoreFile越来越多，会触发Compact合并操作，将过多的StoteFile合并成一个大的StoreFile。</p>
+<p>9）当StoreFile越来越多时，Region也会越来越大，当达到阈值时，会触发spilit操作，将这个Region一分为二。</p>
+<p>ps：HBase中所有的更新和删除操作都会在后续的compact中进行，使得用户的写操作只需要进入内存中就行了。实现了HBase的 I/O高性能</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="请描述hbase的flush流程">请描述HBase的flush流程<a href="#请描述hbase的flush流程" class="hash-link" aria-label="Direct link to 请描述HBase的flush流程" title="Direct link to 请描述HBase的flush流程">​</a></h3>
+<p>HBase 的 flush 流程是指将内存中的数据写入磁盘的过程，它分为三个阶段：prepare、flush 和 commit。下面对这三个阶段进行详细描述：</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-prepare-阶段">1. prepare 阶段：<a href="#1-prepare-阶段" class="hash-link" aria-label="Direct link to 1. prepare 阶段：" title="Direct link to 1. prepare 阶段：">​</a></h4>
+<ul>
+<li>添加 updateLock 锁，阻塞写请求。目的是确保在 prepare 阶段，没有其他的写请求进入，以保证数据的一致性和完整性。</li>
+<li>遍历 MemStore，将 MemStore 中的数据集 CellSkipSet 做一个快照 Snapshot。快照 Snapshot 是一个只读的、不可变的数据集，用于在 flush 阶段将数据写入磁盘。</li>
+<li>新建 CellSkipListSet，用于保存后续的写入数据。这一步是为了隔离准备阶段和 flush 阶段的数据，以便在 flush 阶段将数据写入磁盘时，不会影响到准备阶段的数据。</li>
+<li>阶段结束，释放 updateLock 锁。</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-flush-阶段">2. flush 阶段：<a href="#2-flush-阶段" class="hash-link" aria-label="Direct link to 2. flush 阶段：" title="Direct link to 2. flush 阶段：">​</a></h4>
+<ul>
+<li>遍历所有的 Memstore，将 prepare 阶段生成的 snapshot 文件持久化到.tmp 目录下，生成临时文件。这一步是将准备阶段的数据写入磁盘的过程，由于涉及到磁盘 I/O 操作，所以相对耗时。</li>
+<li>刷新缓存，将新生成的 HFile 添加到缓存中。</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-commit-阶段">3. commit 阶段：<a href="#3-commit-阶段" class="hash-link" aria-label="Direct link to 3. commit 阶段：" title="Direct link to 3. commit 阶段：">​</a></h4>
+<ul>
+<li>遍历 memstore，将临时文件移动到指定的 ColumnFamily 目录下。这一步是将 flush 阶段生成的临时文件替换掉准备阶段的 Snapshot，完成数据的持久化。</li>
+<li>针对 HFile 生成对应的 storefile 和 Reader，把 storefile 添加到 HStore 的 storefiles 列表中。</li>
+<li>最后再清空 prepare 阶段生成的 snapshot。</li>
+</ul>
+<p>HBase 的 flush 流程旨在确保数据的一致性、完整性和高效性。通过将内存中的数据写入磁盘，可以释放内存资源，以便后续的读写操作。同时，flush 流程的设计也保证了数据在写入磁盘过程中的高可用性和可靠性</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hbase-热点现象数据倾斜怎么产生的以及解决方法有哪些">HBase 热点现象（数据倾斜）怎么产生的，以及解决方法有哪些<a href="#hbase-热点现象数据倾斜怎么产生的以及解决方法有哪些" class="hash-link" aria-label="Direct link to HBase 热点现象（数据倾斜）怎么产生的，以及解决方法有哪些" title="Direct link to HBase 热点现象（数据倾斜）怎么产生的，以及解决方法有哪些">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="热点现象"><strong>热点现象</strong>：<a href="#热点现象" class="hash-link" aria-label="Direct link to 热点现象" title="Direct link to 热点现象">​</a></h4>
+<p>某个小的时段内，对HBase的读写请求集中到极少数的Region上，导致这些region所在的RegionServer处理请求量骤增，负载量明显偏大，而其他的RgionServer明显空闲。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="热点现象出现的原因"><strong>热点现象出现的原因</strong>：<a href="#热点现象出现的原因" class="hash-link" aria-label="Direct link to 热点现象出现的原因" title="Direct link to 热点现象出现的原因">​</a></h4>
+<p>HBase中的行是按照rowkey的字典顺序排序的，这种设计优化了scan操作，可以将相关的行以及会被一起读取的行存取在临近位置，便于scan。然而糟糕的rowkey设计是热点的源头。</p>
+<p>热点发生在大量的client直接访问集群的一个或极少数个节点（访问可能是读，写或者其他操作）。大量访问会使热点region所在的单个机器超出自身承受能力，引起性能 下降甚至region不可用，这也会影响同一个RegionServer上的其他region，由于主机无法服务其他region的请求。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="热点现象解决办法"><strong>热点现象解决办法</strong>：<a href="#热点现象解决办法" class="hash-link" aria-label="Direct link to 热点现象解决办法" title="Direct link to 热点现象解决办法">​</a></h4>
+<p>为了避免写热点，设计rowkey使得不同行在同一个region，但是在更多数据情况下，数据应该被写入集群的多个region，而不是一个。常见的方法有以下这些：</p>
+<ul>
+<li>
+<p><strong>加盐</strong>：在rowkey的前面增加随机数，使得它和之前的rowkey的开头不同。分配的前缀种类数量应该和你想使用数据分散到不同的region的数量一致。加盐之后的rowkey就会根据随机生成的前缀分散到各个region上，以避免热点。</p>
+</li>
+<li>
+<p><strong>哈希</strong>：哈希可以使负载分散到整个集群，但是读却是可以预测的。使用确定的哈希可以让客户端重构完整的rowkey，可以使用get操作准确获取某一个行数据</p>
+</li>
+<li>
+<p><strong>反转</strong>：第三种防止热点的方法时反转固定长度或者数字格式的rowkey。这样可以使得rowkey中经常改变的部分（最没有意义的部分）放在前面。这样可以有效的随机rowkey，但是牺牲了rowkey的有序性。反转rowkey的例子以手机号为rowkey，可以将手机号反转后的字符串作为rowkey，这样的就避免了以手机号那样比较固定开头导致热点问题</p>
+</li>
+<li>
+<p><strong>时间戳反转</strong>：一个常见的数据处理问题是快速获取数据的最近版本，使用反转的时间戳作为rowkey的一部分对这个问题十分有用，可以用<code>Long.Max_Value - timestamp</code> 追加到key的末尾，例如<code>[key][reverse_timestamp],[key]</code>的最新值可以通过<code>scan [key]</code>获得[key]的第一条记录，因为HBase中rowkey是有序的，第一条记录是最后录入的数据。</p>
+<p>比如需要保存一个用户的操作记录，按照操作时间倒序排序，在设计rowkey的时候，可以这样设计<code>[userId反转] [Long.Max_Value - timestamp]</code>，在查询用户的所有操作记录数据的时候，直接指定反转后的userId，startRow是<code>[userId反转][000000000000]</code>，stopRow是<code>[userId反转][Long.Max_Value - timestamp]</code></p>
+<p>如果需要查询某段时间的操作记录，startRow是<code>[user反转][Long.Max_Value - 起始时间]</code>，stopRow是<code>[userId反转][Long.Max_Value - 结束时间]</code></p>
+</li>
+<li>
+<p><strong>HBase建表预分区</strong>：创建HBase表时，就预先根据可能的RowKey划分出多个region而不是默认的一个，从而可以将后续的读写操作负载均衡到不同的region上，避免热点现象。</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="谈谈-hbase-的大合并小合并">谈谈 HBase 的大合并、小合并<a href="#谈谈-hbase-的大合并小合并" class="hash-link" aria-label="Direct link to 谈谈 HBase 的大合并、小合并" title="Direct link to 谈谈 HBase 的大合并、小合并">​</a></h3>
+<p>HBase 中的大合并和小合并都是针对 HFile 文件的管理操作。HFile 是 HBase 中的存储文件，每个 HFile 文件都包含一个或多个 Region 的数据。当数据在 HFile 文件中被删除时，该记录会被打上标记 DeleteColumn，并且使用 get 和 scan 查询不到，但是该记录仍然存在于 HFile 文件中。</p>
+<ul>
+<li><strong>大合并</strong>：是指将一个 Region 的所有 HFile 文件合并成一个 HFile 文件。在大合并过程中，HBase 会首先将所有 HFile 文件中的数据进行合并，然后将合并后的数据写入一个新的 HFile 文件中。在这个过程中，HBase 会删除标记为 DeleteColumn 的记录，从而真正删除这些记录。大合并通常在 HBase 集群中进行，以确保数据的一致性和完整性。</li>
+<li><strong>小合并</strong>：是指将多个小的 HFile 文件合并成一个大的 HFile 文件，并将新文件设置为激活状态，删除小文件。小合并通常在 HBase 集群中进行，以减少 HFile 文件的数量，从而提高查询效率。在小合并过程中，HBase 会首先将所有参与合并的 HFile 文件中的数据进行合并，然后将合并后的数据写入一个新的 HFile 文件中。在新的 HFile 文件中，HBase 会设置激活状态，并将原来的小文件删除。</li>
+</ul>
+<p>HBase 中的大合并和小合并都是通过 HFile 文件进行数据管理的操作。大合并用于删除标记为 DeleteColumn 的记录，并确保数据的一致性和完整性；小合并用于减少 HFile 文件的数量，提高查询效率。这两种合并操作在 HBase 集群中进行，以确保数据的安全性和一致性。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="参考">参考<a href="#参考" class="hash-link" aria-label="Direct link to 参考" title="Direct link to 参考">​</a></h3>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000023423629" target="_blank" rel="noopener noreferrer">https://segmentfault.com/a/1190000023423629</a></li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Hadoop/Hbase面试题.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Hadoop/Hadoop面试题"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Hadoop面试题</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/Hive/Hive调优"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Hive调优</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#hbase是什么" class="table-of-contents__link toc-highlight">HBase是什么</a></li><li><a href="#说说-hbase-的存储结构" class="table-of-contents__link toc-highlight">说说 HBase 的存储结构</a></li><li><a href="#说说-hbase-详细架构及内部机制" class="table-of-contents__link toc-highlight">说说 HBase 详细架构及内部机制</a></li><li><a href="#说说hbase-的特点" class="table-of-contents__link toc-highlight">说说HBase 的特点</a></li><li><a href="#为什么-hbase-查询比较快" class="table-of-contents__link toc-highlight">为什么 HBase 查询比较快</a></li><li><a href="#说说-hbase-的-rowkey-的设计原则" class="table-of-contents__link toc-highlight">说说 HBase 的 rowKey 的设计原则</a></li><li><a href="#说说-hbase-中-scan-和-get-的功能以及实现的异同" class="table-of-contents__link toc-highlight">说说 HBase 中 scan 和 get 的功能以及实现的异同</a></li><li><a href="#详细谈谈-hbase-中一个-cell-的结构" class="table-of-contents__link toc-highlight">详细谈谈 HBase 中一个 cell 的结构</a></li><li><a href="#hbase-中分布式存储的最小单元是什么" class="table-of-contents__link toc-highlight">HBase 中分布式存储的最小单元是什么</a></li><li><a href="#请描述如何解决-hbase-中-region-太小和-region-太大带来的冲突" class="table-of-contents__link toc-highlight">请描述如何解决 HBase 中 region 太小和 region 太大带来的冲突</a></li><li><a href="#简述-hbase-中-compact-机制" class="table-of-contents__link toc-highlight">简述 HBase 中 compact 机制</a></li><li><a href="#hbase-如何进行预分区以及作用" class="table-of-contents__link toc-highlight">HBase 如何进行预分区以及作用</a></li><li><a href="#hregionserver-宕机如何处理" class="table-of-contents__link toc-highlight">HRegionServer 宕机如何处理</a></li><li><a href="#说说-hbase-的读流程" class="table-of-contents__link toc-highlight">说说 HBase 的读流程</a></li><li><a href="#hbase-的写流程" class="table-of-contents__link toc-highlight">HBase 的写流程</a></li><li><a href="#请描述hbase的flush流程" class="table-of-contents__link toc-highlight">请描述HBase的flush流程</a></li><li><a href="#hbase-热点现象数据倾斜怎么产生的以及解决方法有哪些" class="table-of-contents__link toc-highlight">HBase 热点现象（数据倾斜）怎么产生的，以及解决方法有哪些</a></li><li><a href="#谈谈-hbase-的大合并小合并" class="table-of-contents__link toc-highlight">谈谈 HBase 的大合并、小合并</a></li><li><a href="#参考" class="table-of-contents__link toc-highlight">参考</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>
